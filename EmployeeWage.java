@@ -1,7 +1,7 @@
 public class EmployeeWage{
 	static int WagePerHr=20,FullDayHrs=8,PartTimeHrs=4;
 	static double EmpWage;
-	static void CalculateWage(double EmpCheck){
+	public void CalculateWage(double EmpCheck){
 		switch((int)EmpCheck){
 		case 1:	System.out.println("Employee is present and work full day");
 			EmpWage=WagePerHr*FullDayHrs;
