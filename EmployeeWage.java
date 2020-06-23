@@ -1,7 +1,7 @@
 public class EmployeeWage{
 	static int totalsalary=0,WagePerHr=20,EmpPerHr=0,NumberWorkingDays=20;
 	static int MaxHrsInMonth=100,totalEmpHr=0,TotalWorkingDays=0;
-	static void CalculateWage(){
+	public void CalculateWage(){
 	while(totalEmpHr<MaxHrsInMonth && TotalWorkingDays<NumberWorkingDays){
                 double EmpCheck=Math.floor(Math.random()*10)%3;
 		switch((int)EmpCheck){
