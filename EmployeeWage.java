@@ -1,24 +1,27 @@
 public class EmployeeWage{
-	static int totalsalary=0,WagePerHr=20,FullDayHrs=8,PartTimeHrs=4,NumberWorkingDays=20;
+	static int totalsalary=0,WagePerHr=20,EmpPerHr=0,NumberWorkingDays=20;
+	static int MaxHrsInMonth=100,totalEmpHr=0,TotalWorkingDays=0;
 	static double EmpWage;
 	static void CalculateWage(){
-	for(int day=1;day<=NumberWorkingDays;day++){
+	while(totalEmpHr<MaxHrsInMonth && TotalWorkingDays<NumberWorkingDays){
                 double EmpCheck=Math.floor(Math.random()*10)%3;
 		switch((int)EmpCheck){
-		case 1:	EmpWage=WagePerHr*FullDayHrs;
+		case 1:	EmpPerHr=8;
 			break;
-		case 2:	EmpWage=WagePerHr*PartTimeHrs;
+		case 2:	EmpPerHr=4;
 			break;
-		default:EmpWage=0;
+		default:EmpPerHr=0;
 			break;
 		}
-		totalsalary=totalsalary+(int)EmpWage;
+		totalEmpHr=totalEmpHr+EmpPerHr;
+		TotalWorkingDays++;
 	}
+	totalsalary=totalEmpHr+WagePerHr;
 	}
         public static void main(String[] args){
 		EmployeeWage Empobj=new EmployeeWage();
 		System.out.println("welcome to employee wage computation problem on master branch");
                 Empobj.CalculateWage();
-		System.out.println("Emplayee totalsalary: "+totalsalary);
+		System.out.println("totalsalary: "+totalsalary);
         }
 }
