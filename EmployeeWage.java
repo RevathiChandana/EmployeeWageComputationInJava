@@ -1,7 +1,7 @@
 public class EmployeeWage{
 	static int totalsalary=0,WagePerHr=20,FullDayHrs=8,PartTimeHrs=4,NumberWorkingDays=20;
 	static double EmpWage;
-	static void CalculateWage(){
+	public void CalculateWage(){
 	for(int day=1;day<=NumberWorkingDays;day++){
                 double EmpCheck=Math.floor(Math.random()*10)%3;
 		switch((int)EmpCheck){
