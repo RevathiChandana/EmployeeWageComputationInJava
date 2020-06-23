@@ -1,7 +1,7 @@
 public class EmployeeWage{
 	static int WagePerHr=20,FullDayHr=8;
 	static double EmpWage;
-	static void CalculateWage(double EmpCheck){
+	public void CalculateWage(double EmpCheck){
 		EmpWage=WagePerHr*FullDayHr*EmpCheck;
 	}
         public static void main(String[] args){
