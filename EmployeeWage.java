@@ -1,7 +1,6 @@
 public class EmployeeWage{
 	static int totalsalary=0,WagePerHr=20,EmpPerHr=0,NumberWorkingDays=20;
 	static int MaxHrsInMonth=100,totalEmpHr=0,TotalWorkingDays=0;
-	static double EmpWage;
 	static void CalculateWage(){
 	while(totalEmpHr<MaxHrsInMonth && TotalWorkingDays<NumberWorkingDays){
                 double EmpCheck=Math.floor(Math.random()*10)%3;
@@ -16,7 +15,7 @@ public class EmployeeWage{
 		totalEmpHr=totalEmpHr+EmpPerHr;
 		TotalWorkingDays++;
 	}
-	totalsalary=totalEmpHr+WagePerHr;
+	totalsalary=totalEmpHr*WagePerHr;
 	}
         public static void main(String[] args){
 		EmployeeWage Empobj=new EmployeeWage();
