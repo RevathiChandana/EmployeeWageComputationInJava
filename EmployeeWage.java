@@ -27,6 +27,7 @@ public class EmployeeWage{
 			}
 		totalEmpHr=totalEmpHr+EmpWorkHr;
 		TotalWorkingDays++;
+		System.out.println("Day: "+TotalWorkingDays+" Employee hours : "+EmpWorkHr);
 		}
 		return totalEmpHr*EmpRatePerHour;
 	}
