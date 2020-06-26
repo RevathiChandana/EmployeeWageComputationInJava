@@ -1,5 +1,5 @@
 public class EmployeeWage{
-	public static final int IsPartTime=1;
+  public static final int IsPartTime=1;
 	public static final int IsFullTime=2;
 
 	private final String company;
