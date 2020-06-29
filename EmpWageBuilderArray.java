@@ -6,7 +6,7 @@ public class EmpWageBuilderArray implements IEmployeeWage
 
         public int numOfCompany=0;
         public ArrayList<EmployeeWage> EmployeeWageArrayList;
-	//public Map<String,EmployeeWage> companyToEmpWageMap;
+
         public EmpWageBuilderArray(){
                 EmployeeWageArrayList=new ArrayList<EmployeeWage>();
         }
@@ -36,7 +36,8 @@ public class EmpWageBuilderArray implements IEmployeeWage
                                          break;
                         }
                 totalEmpHr=totalEmpHr+EmpWorkHr;
-                TotalWorkingDays++;
+                System.out.println("Daily Wage : "+employeeWage.EmpRatePerHour*EmpWorkHr);
+		TotalWorkingDays++;
 		}
                 System.out.println("Days: "+TotalWorkingDays+" Employee hours : "+totalEmpHr);
                 return totalEmpHr*employeeWage.EmpRatePerHour;
