@@ -1,4 +1,4 @@
-public class EmpWageBuilderArray
+public class EmpWageBuilderArray implements IEmployeeWage
 {
         public static final int IsPartTime=1;
         public static final int IsFullTime=2;
@@ -40,7 +40,7 @@ public class EmpWageBuilderArray
                 return totalEmpHr*employeeWage.EmpRatePerHour;
         }
         public static void main(String[] args){
-                EmpWageBuilderArray empWageBuilder=new EmpWageBuilderArray();
+                IEmployeeWage empWageBuilder=new EmpWageBuilderArray();
                 empWageBuilder.addCompanyEmpWage("Dmart",20,25,100);
                 empWageBuilder.addCompanyEmpWage("Reliance",10,21,200);
                 empWageBuilder.calculateEmpWage();
