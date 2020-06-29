@@ -6,14 +6,17 @@ public class EmpWageBuilderArray implements IEmployeeWage
 
         public int numOfCompany=0;
         public ArrayList<EmployeeWage> EmployeeWageArrayList;
+	public Map<String,EmployeeWage> EmployeeWageMap;
 
         public EmpWageBuilderArray(){
                 EmployeeWageArrayList=new ArrayList<EmployeeWage>();
+		EmployeeWageMap=new HashMap<>();
         }
 
         public void addCompanyEmpWage(String company,int EmpRatePerHour,int NumOfWorkingDays,int MaxHoursPerMonth){
                 EmployeeWage employeeWage=new EmployeeWage(company,EmpRatePerHour,NumOfWorkingDays,MaxHoursPerMonth);
                 EmployeeWageArrayList.add(employeeWage);
+		EmployeeWageMap.put(company,employeeWage);
         }
 
         public void calculateEmpWage(){
@@ -23,6 +26,11 @@ public class EmpWageBuilderArray implements IEmployeeWage
                         System.out.println(employeeWage);
                 }
         }
+
+	public int getTotalWage(String company){
+		return EmployeeWageMap.get(company).totalEmpWage;
+	}
+
         public int calculateEmpWage(EmployeeWage employeeWage){
                 int EmpWorkHr=0,totalEmpHr=0,TotalWorkingDays=0,totalsalary=0;
                 while(totalEmpHr<=employeeWage.MaxHoursPerMonth && TotalWorkingDays<employeeWage.NumOfWorkingDays){
